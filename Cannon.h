@@ -4,6 +4,7 @@ USING_NS_CC;
 
 #define _CANNON_H
 
+
 typedef enum{
 	k_Cannon_Type_1 = 0,
 	k_Cannon_Type_2,
@@ -32,7 +33,7 @@ public:
 	float getFireRange();
 	CC_PROPERTY(CannonType, _type, Type);
 	virtual ~Cannon(void);
-
+	void aimAt(CCPoint target);
 protected:
 	CCArray* _cannonSprites;
 };

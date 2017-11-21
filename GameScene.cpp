@@ -1,5 +1,5 @@
+﻿
 #include "GameScene.h"
-#include "CannonLayer.h"
 
 GameScene::GameScene()
 {
@@ -18,12 +18,16 @@ bool GameScene::init()
 		CC_SAFE_RETAIN(_menuLayer); 
 		_backgroundLayer = BackgroundLayer::create();
 		CC_BREAK_IF(!_backgroundLayer);
-		addChild(_backgroundLayer);
+		this->addChild(_backgroundLayer);
 		_fishLayer = FishLayer::create();
 		CC_BREAK_IF(!_fishLayer);
-		addChild(_fishLayer);
-		CannonLayer* cannonLayer = CannonLayer::create();
-		addChild(cannonLayer);
+		this->addChild(_fishLayer);
+		_cannonLayer = CannonLayer::create();
+		CC_BREAK_IF(!_cannonLayer);
+		this->addChild(_cannonLayer);
+		_touchLayer = TouchLayer::create();
+		CC_BREAK_IF(!_touchLayer);
+		this->addChild(_touchLayer);
 		return true;
 	} while (0);
 	return false;
@@ -72,4 +76,14 @@ void GameScene::preloadResources(void)
 GameScene::~GameScene()
 {
 	CC_SAFE_RELEASE(_menuLayer);
+}
+
+void GameScene::cannonAimAt(CCPoint target)
+{
+	_cannonLayer->aimAt(target);
+}
+
+void GameScene::cannonShootTo(CCPoint target)
+{
+	_cannonLayer->shootTo(target);
 }

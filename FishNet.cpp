@@ -1,3 +1,4 @@
+
 #include "FishNet.h"
 
 FishNet::FishNet(void)
@@ -19,6 +20,7 @@ bool FishNet::init()
 	_fishNetSprite = CCSprite::createWithSpriteFrameName(fileName->getCString());
 	_fishNetSprite->setAnchorPoint(ccp(0.5, 1));
 	addChild(_fishNetSprite);
+	return true;
 }
 float FishNet::getSpeed(int type)
 {
