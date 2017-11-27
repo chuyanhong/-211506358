@@ -1,4 +1,3 @@
-
 #include "Weapon.h"
 
 #define BULLET_COUNT 10

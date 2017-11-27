@@ -8,7 +8,6 @@ Fish::~Fish(void)
 {
 }
 
-
 Fish* Fish::create(FishType type/* = k_Fish_Type_SmallFish */)
 {
 	Fish* fish = new Fish;

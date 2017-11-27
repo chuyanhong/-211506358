@@ -1,4 +1,3 @@
-
 #include "FishNet.h"
 
 FishNet::FishNet(void)

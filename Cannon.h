@@ -4,7 +4,6 @@ USING_NS_CC;
 
 #define _CANNON_H
 
-
 typedef enum{
 	k_Cannon_Type_1 = 0,
 	k_Cannon_Type_2,

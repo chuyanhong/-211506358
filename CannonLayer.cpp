@@ -8,7 +8,6 @@ CannonLayer::~CannonLayer(void)
 {
 }
 
-
 bool CannonLayer::init()
 {
 	if(!CCLayer::init())

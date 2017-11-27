@@ -9,7 +9,6 @@ class CannonLayer :
 {
 public:
 	CannonLayer(void);
-
 	virtual ~CannonLayer(void);
 	virtual bool init();
 	void switchCannonCallback(cocos2d::CCObject* sender);
